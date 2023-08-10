@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root {    
+    --body-fonts: 'Poppins', sans-serif; 
+    --black-text: #000000;   
+    --white-text: #ffffff;  
+    --red-bg: #d62c27;
+    --blue-bg: #1c4480;    
+    --secendary-color:#3b3b3b;
+    --light-gray: #fafafa;
+    --dark-gray: #595959;
+    --dark-blue: #3b5998;
+    --nav-text: #272727;
+    --light-blue: #3e4070;
+    --gray: #cccccc;
+    --off-white: #8ea2c0;
+    --copyright-bg: #d6d6d6;
+
+    --fn-10: 10px;
+    --fn-12: 12px;
+    --fn-14: 14px;
+    --fn-16: 16px;
+    --fn-17: 17px;
+    --fn-18: 18px;
+    --fn-20: 20px;
+    --fn-30: 30px;
+    --fn-34: 34px;
+
+    --light:300;
+    --normal:400;
+    --medium:500;
+    --semi-bold:600;
+    --bold:700;
+
+    --grobal-line-height: 150%;
+
+}
+body{
+    font-family: var(--body-fonts);
+}
+.main-heading{ font-size: var(--fn-30); line-height: var(--grobal-line-height); color: var(--black-text); padding: 0; margin: 0; font-weight: var(--light);}
+.main-content{ font-size: var(--fn-16); line-height: var(--grobal-line-height); color: var(--secendary-color); padding: 0; margin: 0; font-weight: var(--normal);}
+/*------------Navigation and Banner Section Start Here-----------------*/
+.hero{ width: 100%; height: auto; background-image: url('../images/hero-bg.png'); background-repeat: no-repeat;  background-size: cover;
+     background-position: center bottom;  height: 770px;
+}
+.navigation-container{ padding: 0 40px 0 50px;}
+.top-header{ display: flex; align-items: center; justify-content: end; position: relative; top: 35px; z-index: 2;}
+.top-header :is(.call, .email, .navbtn){ color: var(--black-text); text-decoration: none; font-size: var(--fn-16); margin-left: 20px;}
+.top-header :is(.call, .email, .navbtn) a{ color: var(--black-text);  text-decoration: none; margin-left: 15px;}
+.top-header :is(.call, .email, .navbtn) a:hover{ color: var(--red-bg); text-decoration: none;}
+.navbar{z-index: 1; padding: 0;}
+.navbar-nav .nav-item{ position: relative; margin-left: 15px;}
+.navbar-nav .nav-item::after{ content: "|";  position: absolute;  top: 8px; right: -10px;}
+.navbar-nav .nav-item .nav-link{ color: var(--nav-text); font-size: var(--fn-16);}
+.navbar-nav .nav-item .nav-link:last-child{ padding-right: 0;}
+.navbar-nav .nav-item .nav-link:hover{ color: var(--red-bg);}
+.navbar-nav .nav-item:last-of-type::after{ display: none;}
+
+.hero-content{ width: 100%; position: relative;  max-width: 370px; margin-top: 80px;}
+.hero-content h1{ font-weight: var(--light);  color: var(--white-text);  font-size: var(--fn-34);}
+.hero-content h1 strong{ font-weight: var(--semi-bold);}
+.hero-content p{ color: var(--white-text); font-size: var(--fn-14);  font-weight: var(--light);  margin-top: 15px;  margin-bottom: 30px;}
+.btnOne{ color: var(--light-blue); font-weight: var(--medium); font-size: var(--fn-17); background-color: var(--white-text);  border-radius: 360px;  padding: 8px 20px;  text-decoration: none;
+    border: none; transition: .3s;
+}
+.btnOne:hover{ text-decoration: none; background-color: var(--red-bg); color: var(--white-text);}
+.navbar-toggler-desktop{display: block;}
+.navbar-toggler{ display: none;}
+
+/*====================About Us Section Start Here=================*/
+.aboutus-section{ width: 100%; background: url(../images//about-icon-3.png) no-repeat right bottom; padding:60px 0 25px 0;}
+.aboutus-section .about-box .boxes{ width: 235px; background: var(--white-text); border-radius: 10px; box-shadow: 0 0 35px rgba(2,2,2, 0.11); margin-right: 40px;
+padding: 25px 20px; text-align: center; transition: .3s;}
+.aboutus-section .about-box .boxes span{ display: block; margin-bottom: 25px;}
+.aboutus-section .about-box .boxes p{ font-size: var(--fn-20); line-height: var(--grobal-line-height); color: var(--black-text); margin-bottom: 30px; padding: 0;}
+.aboutus-section .about-box .boxes a{ font-size: var(--fn-16); line-height: var(--grobal-line-height); color: var(--black-text); text-decoration: none; 
+background: var(--light-gray); border-radius: 6px; display: block; padding: 8px 0; text-align: center;}
+.aboutus-section .about-box .boxes a:hover{ background: var(--white-text);}
+.aboutus-section .about-box .boxes:last-child{ margin-right: 0; box-shadow: none; background: var(--red-bg);}
+.aboutus-section .about-box .boxes:last-child p{ color: var(--white-text);}
+.aboutus-section .about-box .boxes:first-child:hover{ background: var(--blue-bg);}
+.aboutus-section .about-box .boxes:first-child:hover img{ filter: brightness(0) invert(1);}
+.aboutus-section .about-box .boxes:first-child:hover p{ color: var(--white-text);}
+
+.aboutus-section .about-content{ padding: 0; margin: 0;}
+.aboutus-section .about-content .main-heading{ margin-bottom: 30px;}
+.aboutus-section .about-content .main-content{ margin-bottom: 35px;}
+
+/*====================Visitor Visa Section Start Here=====================*/
+.visitor-visa-section{ width: 100%; min-height: 528px; position: relative;}
+.visitor-visa-section::after{
+    position: absolute; left: 0; top: -55px; content: ''; background: url(../images/left-star.png); width: 126px; height: 187px;
+}
+.visitor-visa-section .visa-container{ padding-top: 95px;}
+.visitor-visa-section .visa-container .main-heading{ margin-bottom: 40px;}
+.visitor-visa-section .visa-container .main-content{ margin-bottom: 60px;}
+.visitor-visa-section .visa-container ul{ column-count: 2; margin-left: 35px; list-style-type: none; padding: 0;}
+.visitor-visa-section .visa-container ul li{position: relative; font-size: var(--fn-16); line-height: var(--grobal-line-height); color: var(--secendary-color);
+padding: 0 0 0 35px; margin-bottom: 25px; font-weight: var(--medium);}
+.visitor-visa-section .visa-container ul li::before{
+    content: ''; position: absolute; left: 0; top: 0; background: url(../images/star.png); width: 20px; height: 20px;
+}
+.visitor-visa-section .visitor-banner{
+    position: absolute; top: 0; right: 0;
+}
+/*=========================Canada Study Visa & Admissions Section Start Here=====================================*/
+.admissions-section{ width: 100%; position: relative; padding: 0 95px 0 70px; margin: 40px 0 0 0;}
+.admissions-section::before{
+    position: absolute; top: -75px; left: 30px; background: url(../images/single-star.png) no-repeat 0 0; content: ''; width: 78px; height: 75px;
+}
+.admissions-section::after{
+    position: absolute; bottom: 105px; right: 30px; background: url(../images/single-star.png) no-repeat 0 0; content: ''; width: 78px; height: 75px;
+}
+
+.admissions-section .admissions-cards{ padding: 0; margin: 0;}
+.cards-col{ margin-right: 24px;}
+.cards-col:first-child{ margin-top: 30px;}
+.cards-col:last-child{margin-right: 0; margin-top: 0;}
+.cards-col .card-box{ border-radius: 10px; box-shadow: 0 0 35px rgba(2,2,2, 0.11); padding: 20px; margin-bottom: 20px;}
+.cards-col .card-box .title{ display: flex; justify-content: flex-start; align-items: center;}
+.cards-col .card-box .title span{ margin-right: 17px;}
+.cards-col .card-box .title h3{ font-size: var(--fn-16); font-weight: var(--semi-bold); color: var(--black-text); padding: 0; margin: 0;}
+.cards-col .card-box:hover{
+    background: rgb(28,68,128);
+    background: linear-gradient(100deg, rgba(28,68,128,1) 0%, rgba(214,44,39,1) 100%); cursor: pointer;
+}
+.cards-col .card-box:hover h3, .cards-col .card-box:hover .content p{color: var(--white-text);}
+.cards-col .card-box .content{ padding-top: 18px;}
+.cards-col .card-box .content p{ font-size: var(--fn-14); font-weight: var(--normal); color: var(--black-text);}
+
+.cards-col .card-box.active{ 
+    background: rgb(28,68,128);
+    background: linear-gradient(100deg, rgba(28,68,128,1) 0%, rgba(214,44,39,1) 100%); cursor: pointer;
+}
+.cards-col .card-box.active h3, .cards-col .card-box.active p{ color: var(--white-text);}
+.admissions-content{ padding: 90px 0 0 90px;}
+.admissions-content .main-heading{ padding-bottom: 30px;}
+.admissions-content .main-content{ padding-bottom: 30px;}
+
+/*=====================Federal & Provincial Programs Section Start Here=======================*/
+.programs-section{ margin: 65px 0 55px 0; text-align: center;}
+.programs-section .programs-col .main-heading{ padding-bottom: 60px;}
+.programs-section .programs-col .common{
+    border-radius: 10px; box-shadow: 0 0 10px rgba(2,2,2, 0.11); background: var(--white-text); margin-bottom: 50px; overflow: hidden; text-align: left;
+}
+.programs-section .programs-col .common span{ height: 78px; font-size: var(--fn-16); font-weight: var(--semi-bold); color: var(--black-text); padding: 15px 20px; 
+    margin: 0; display: block;
+}
+.programs-section .programs-col .common a{ text-decoration: none;}
+.programs-section .programs-col .owl-nav .owl-prev{ background: url(../images/prev.png) no-repeat 0 0; width: 36px; height: 38px; margin-right: 15px;}
+.programs-section .programs-col .owl-nav .owl-prev span{ opacity: 0;}
+.programs-section .programs-col .owl-nav .owl-next{ background: url(../images/next.png) no-repeat 0 0; width: 36px; height: 38px;}
+.programs-section .programs-col .owl-nav .owl-next span{ opacity: 0;}
+/*========================Work Permits Section Start Here=============================*/
+.workpermit-section{ background: var(--blue-bg);}
+.workpermit-content{ padding-top: 45px;}
+.workpermit-content .data{  display: flex; padding-bottom: 60px;}
+.workpermit-content .data .main-heading{ color: var(--white-text); white-space: nowrap; margin-right: 90px;}
+.workpermit-content .data .main-content{ color: var(--white-text);}
+
+.workpermit-navigation{ border-top: solid 2px var(--off-white); border-bottom: solid 2px var(--off-white); padding: 25px 0;}
+.workpermit-navigation ul{ list-style-type: none; padding: 0; margin: 0; text-align: center;}
+.workpermit-navigation ul li{ display: inline-block; position: relative; color: var(--white-text);}
+.workpermit-navigation ul li::after{ content: "|";  position: absolute;  top: 0; left: 0;}
+.workpermit-navigation ul li:first-child::after{ display: none;}
+.workpermit-navigation ul li a{ font-size: var(--fn-14); color: var(--white-text); padding: 0 22px; font-weight: var(--normal); text-decoration: none;}
+.workpermit-navigation ul li a:hover{ color: var(--off-white);}
+
+/*===================Footer Section Start Here==========================*/
+.footer-top{ padding: 60px 40px 40px 50px;}
+.footer-top h2{ font-size: var(--fn-16); font-weight: var(--semi-bold); color: var(--black-text); margin-bottom: 24px; padding: 0;}
+.footer-icons{ text-align: center;}
+.footer-icons ul{ list-style-type: none; margin:25px 0 0 0; padding: 0;}
+.footer-icons ul li{ display: inline-block; margin-right: 10px;}
+.footer-icons ul li:last-child{ margin-right: 0;}
+
+.quick-links ul{ list-style: none; column-count: 2; padding: 0; margin: 0;}
+.quick-links ul li{ margin-bottom: 10px;}
+.quick-links ul li a{ font-size: var(--fn-14); color: var(--dark-gray); font-weight: var(--normal); text-decoration: none;}
+.quick-links ul li a:hover{ color: var(--black-text); text-decoration: underline;}
+
+.footer-box{ padding: 0; margin: 0;}
+.footer-box ul{ padding: 0; margin: 0; list-style-type: none;}
+.footer-box ul li{ position: relative; font-size: var(--fn-14); color: var(--black-text); font-weight: var(--normal); text-decoration: none; 
+    padding-left: 20px; margin-bottom: 15px;}
+.footer-box ul li span{ position: absolute; left: 0; top: 0; color: var(--dark-blue); font-weight: var(--bold);}
+.footer-box ul li a{ font-size: var(--fn-14); color: var(--black-text); font-weight: var(--normal); text-decoration: none;}
+
+.copyright{ background: var(--copyright-bg); font-size: var(--fn-14); color: var(--black-text); font-weight: var(--normal); padding: 15px 0;}
+/*==================Responsive Section Start Here========================*/
+@media (max-width:1367px) {
+    .workpermit-navigation ul li a{ padding: 0 20px;}
+}
+@media (max-width:1025px) {
+    .top-header :is(.call, .email, .navbtn) a{ margin-left: 10px;}
+    .visitor-visa-section .visitor-banner{ position: relative;  text-align: center;}
+    .visitor-visa-section .visitor-banner img{ max-width: 100%;}
+    .main-heading{ font-size: var(--fn-30);}
+    .ipad-view{ width: 100%;}    
+}
+@media (max-width:991px) {
+    .navbar-toggler-desktop{ display: none; }
+    .navbar-toggler{ display: block; }
+    .hero{ background-image: url('../images/hero-bg-mobile.png');  background-position: left bottom;  padding-top: 35px;  padding-bottom: 200px; }
+    .navbar .navbar-brand img{ width: 250px; }
+    .navbar-collapse{ position: absolute; top: 120px;  left: 0;  width: 100%; height: auto; background-color: var(--white-text); border-radius: 8px;
+        border: 1px solid var(--gray);
+    }
+    .navbar-nav .nav-item::after{ display: none;}
+    .top-header :is(.call, .email, .navbtn) a{ color: var(--white-text);}
+    .admissions-content{ padding: 90px 0 0 0;}
+    .cards-col { margin-right: 0; }
+    .aboutus-section .about-box .boxes{ width: 100%;}
+    .quick-links{ margin-bottom: 16px;}
+}
+@media (max-width:767px) {
+    .top-header{ top: 0; justify-content: space-between; margin-bottom: 35px; }
+    .top-header :is(.call, .email, .navbtn) a{ color: var(--white-text);}
+    .hero{ background-image: url('../images/hero-bg-mobile.png');  background-position: left bottom;  padding-top: 35px;  padding-bottom: 200px; height: auto;}
+    .hero-content{  margin-top: 50px; }
+    .visitor-visa-section .visa-container ul{ column-count: 1;}
+    .admissions-section{ padding: 0;}
+    .workpermit-content .data{  display: block;}
+    .quick-links ul{ column-count: 1;}
+    .footer-top { padding: 60px 0 40px 0; }
+    .quick-links{ margin-top: 16px;}
+    .aboutus-section .about-box .boxes{ margin-bottom: 24px;}
+    .navigation-container {  padding: 0; }
+
+}
+@media (max-width:575px) {
+    .top-header{ display: block; }
+    .top-header .call{ margin-bottom: 8px; }
+    .top-header .navbtn{ position: absolute; right: 0px;  top: 0px;}
+}
